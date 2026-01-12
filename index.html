@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 HP Terbaik 2025 - Sea of Quanta Collection</title>
+    <style>
+        /* =========================================
+           GLOBAL VARIABLES & RESET
+           ========================================= */
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #1a1a1a;
+            --text-light: #666666;
+            --accent-color: #4a90e2;
+            --accent-glow: rgba(74, 144, 226, 0.4);
+            --accent-hover: #357abd;
+            --card-bg: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.5);
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --spacing-unit: 20px;
+            --header-height: 70px;
+            --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 30px rgba(0,0,0,0.1);
+            --shadow-hover: 0 20px 40px rgba(74, 144, 226, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-color);
+        }
+
+        /* =========================================
+           PRELOADER
+           ========================================= */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease, visibility 0.5s;
+        }
+
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* =========================================
+           NAVIGASI (Glassmorphism)
+           ========================================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            max-width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--text-color);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+
+        .nav-logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: var(--accent-color);
+        }
+
+        .nav-links li a:hover::after,
+        .nav-links li a.active::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .menu-toggle:active {
+            transform: scale(0.9);
+        }
+
+        /* =========================================
+           MAIN STRUCTURE & ANIMATIONS
+           ========================================= */
+        main {
+            width: 100%;
+            min-height: 100vh;
+            padding-top: var(--header-height);
+        }
+
+        .page-section {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .page-section.active {
+            display: block;
+            /* Animation handled via JS adding 'loaded' class */
+        }
+        
+        .page-section.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px var(--spacing-unit);
+        }
+
+        /* Scroll Reveal Animation Utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           TYPOGRAPHY & BUTTONS
+           ========================================= */
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; letter-spacing: -1px; }
+        h2 { font-size: 2.2rem; }
+        h3 { font-size: 1.4rem; }
+        p { margin-bottom: 20px; color: var(--text-light); font-size: 1.05rem; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px var(--accent-glow);
+            gap: 8px;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px var(--accent-glow);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: white;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+
+        /* =========================================
+           HERO SECTION (Canvas Animation)
+           ========================================= */
+        #home {
+            position: relative;
+            padding-top: 0;
+        }
+
+        .hero-container {
+            position: relative;
+            width: 100%;
+            height: 90vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            /* Background image fallback */
+            background: url('https://z-cdn-media.chatglm.cn/files/e6b01bbb-0368-4971-9c26-13a42e9da459.png?auth_key=1868239040-1c296492000340519573e702634c2ccc-0-7f4bf7a05b5932f4f2053d7a70a111c6') no-repeat center center/cover;
+        }
+        
+        /* Overlay Gradient */
+        .hero-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(20,20,50,0.4) 100%);
+            z-index: 1;
+        }
+
+        /* Canvas Layer */
+        #hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            color: white;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        /* =========================================
+           GRID LAYOUTS
+           ========================================= */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .grid-catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        @media (min-width: 992px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* =========================================
+           PRODUCT CARDS (3D Hover Effect)
+           ========================================= */
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid #eee;
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: transparent;
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .card-img {
+            transform: scale(1.08);
+        }
+
+        .card-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 8px;
+        }
+
+        .card-link {
+            margin-top: auto;
+            color: var(--accent-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* =========================================
+           PRODUCT DETAIL PAGE
+           ========================================= */
+        .product-img-detail {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s;
+        }
+        
+        .product-img-detail:hover {
+            transform: scale(1.02);
+        }
+
+        .specs-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .specs-list li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .specs-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .specs-list strong {
+            color: var(--text-color);
+            display: block;
+            min-width: 140px;
+            font-weight: 700;
+        }
+
+        /* =========================================
+           FOOTER & FORM
+           ========================================= */
+        footer {
+            background: #fff;
+            padding: 80px 20px 40px;
+            border-top: 1px solid #eee;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-form {
+            text-align: left;
+            margin-top: 40px;
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-color);
+        }
+
+        /* =========================================
+           TOAST NOTIFICATION
+           ========================================= */
+        .toast-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 10000;
+        }
+
+        .toast {
+            background: #fff;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 10px;
+            transform: translateX(120%);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast.success { border-left-color: #2ecc71; }
+        .toast.error { border-left-color: #e74c3c; }
+
+        /* =========================================
+           MEDIA QUERIES
+           ========================================= */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: var(--header-height);
+                right: -100%;
+                width: 70%;
+                height: calc(100vh - var(--header-height));
+                background: #fff;
+                flex-direction: column;
+                padding: 40px;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.05);
+                transition: right 0.3s ease;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="#home" class="nav-logo" onclick="navigateTo('home')">
+                Sea<span>Of</span>Quanta
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="navigateTo('home')">Beranda</a></li>
+                <li><a href="#katalog" onclick="navigateTo('katalog')">Katalog</a></li>
+                <li><a href="#poco-x7-pro" onclick="navigateTo('poco-x7-pro')">POCO</a></li>
+                <li><a href="#realme-gt7" onclick="navigateTo('realme-gt7')">Realme</a></li>
+                <li><a href="#oppo-find-x8" onclick="navigateTo('oppo-find-x8')">OPPO</a></li>
+                <li><a href="#vivo-x300" onclick="navigateTo('vivo-x300')">vivo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- =======================
+             1. LANDING PAGE
+             ======================= -->
+        <section id="home" class="page-section active">
+            <div class="hero-container">
+                <!-- Canvas Background for 2D Animation -->
+                <canvas id="hero-canvas"></canvas>
+                
+                <div class="hero-content">
+                    <h1 class="reveal">Future in Your Hand</h1>
+                    <p class="reveal" style="transition-delay: 0.1s;">Koleksi 4 HP Terbaik 2025. Bandingkan spesifikasi, rasakan performa, dan temukan pilihan terbaik Anda.</p>
+                    <div class="reveal" style="transition-delay: 0.2s;">
+                        <button onclick="navigateTo('katalog')" class="btn">
+                            Jelajahi Katalog <span>&rarr;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="reveal">
+                    <h2>Highlight Koleksi</h2>
+                    <p>Flagship killer dengan teknologi kamera dan chipset mutakhir.</p>
+                </div>
+                
+                <div class="grid-catalog">
+                    <!-- Shortcut Cards -->
+                    <a href="#poco-x7-pro" onclick="navigateTo('poco-x7-pro')" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://z-cdn-media.chatglm.cn/files/e4f4323b-547b-48e2-a94b-35092b09ed61.png?auth_key=1868239040-6bb75bd464144e6295c3b59e86c0add4-0-21b254d605c245ae8239313f610b532d " alt="POCO X7 Pro" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">POCO X7 Pro</h3>
+                            <p>Performa Ultra 6000mAh.</p>
+                            <span class="card-link">Lihat Spesifikasi &rarr;</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#realme-gt7" onclick="navigateTo('realme-gt7')" class="product-card reveal" style="transition-delay: 0.1s;">
+                        <div class="card-img-wrapper">
+                            <img src="https://z-cdn-media.chatglm.cn/files/d9743fed-b2bf-4737-b1b2-1077d73a4dfa.png?auth_key=1868239040-f4975242ec53467898d31d4db1c0b721-0-98960f0cb7aa2282afe1b5e17259219b " alt="realme GT 7" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">realme GT 7</h3>
+                            <p>Desain Pendingin Besar.</p>
+                            <span class="card-link">Lihat Spesifikasi &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =======================
+             2. HALAMAN KATALOG
+             ======================= -->
+        <section id="katalog" class="page-section">
+            <div class="container">
+                <div class="reveal">
+                    <img src="https://z-cdn-media.chatglm.cn/files/00952d96-117d-401e-82cb-0d95053e0625.jpg?auth_key=1868239040-df9313a9694a4c63ad2f717afff69899-0-c76aa6191365db0d4fb6213ceb5c9e2f " alt="Katalog Cover" style="width:100%; border-radius:20px; margin-bottom:40px; box-shadow: var(--shadow-md);">
+                    
+                    <h1>Katalog Lengkap</h1>
+                    <p>Simak detail spesifikasi dari empat monster teknologi tahun ini.</p>
+                    
+                    <div style="margin-bottom: 40px;">
+                        <a href="https://drive.google.com/drive/folders/1FBQWJvKfW40_zN8iwbxQpBs4UMj2PcsJ " target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            Buka di Google Drive
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid-catalog">
+                    <a href="#poco-x7-pro" onclick="navigateTo('poco-x7-pro')" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://z-cdn-media.chatglm.cn/files/e4f4323b-547b-48e2-a94b-35092b09ed61.png?auth_key=1868239040-6bb75bd464144e6295c3b59e86c0add4-0-21b254d605c245ae8239313f610b532d " alt="POCO X7 Pro" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">POCO X7 Pro</h3>
+                            <p>Tag: Layar AMOLED 1.5K, Performa Brutal.</p>
+                            <span class="card-link">Lihat Detail &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="#realme-gt7" onclick="navigateTo('realme-gt7')" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://z-cdn-media.chatglm.cn/files/d9743fed-b2bf-4737-b1b2-1077d73a4dfa.png?auth_key=1868239040-f4975242ec53467898d31d4db1c0b721-0-98960f0cb7aa2282afe1b5e17259219b " alt="realme GT 7" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">realme GT 7</h3>
+                            <p>Tag: SuperVOOC 120W, Baterai 7000mAh.</p>
+                            <span class="card-link">Lihat Detail &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="#oppo-find-x8" onclick="navigateTo('oppo-find-x8')" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://z-cdn-media.chatglm.cn/files/230bebad-9656-446c-a1d3-a5ed1c1df795.png?auth_key=1868239040-74e5fa7759cc46c78c067daf39746bb8-0-51f18b6b2aa2a0ca759dedcb3ba141de " alt="OPPO Find X8" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">OPPO Find X8</h3>
+                            <p>Tag: AI Telescope Zoom, AI Remaster.</p>
+                            <span class="card-link">Lihat Detail &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="#vivo-x300" onclick="navigateTo('vivo-x300')" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://z-cdn-media.chatglm.cn/files/53f1d2e3-accc-4303-b2fc-ed1ce41d6e76.png?auth_key=1868239040-f950462e30ad414d8232546f38c4a92d-0-f9786ee7b2d1f6b9c10b89a55a4459b9 " alt="vivo X300" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">vivo X300</h3>
+                            <p>Tag: 200MP Sensor, Video 4K Cinematic.</p>
+                            <span class="card-link">Lihat Detail &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =======================
+             3. DETAIL: POCO X7 Pro
+             ======================= -->
+        <section id="poco-x7-pro" class="page-section">
+            <div class="container">
+                <button onclick="navigateTo('katalog')" class="btn-outline" style="margin-bottom:30px; border:none; padding-left:0; color: var(--text-light);">&larr; Kembali ke Katalog</button>
+                
+                <div class="grid-2">
+                    <div class="reveal">
+                        <img src="https://z-cdn-media.chatglm.cn/files/e4f4323b-547b-48e2-a94b-35092b09ed61.png?auth_key=1868239040-6bb75bd464144e6295c3b59e86c0add4-0-21b254d605c245ae8239313f610b532d " alt="POCO X7 Pro" class="product-img-detail">
+                    </div>
+                    
+                    <div class="reveal" style="transition-delay: 0.2s;">
+                        <h1 style="color: var(--accent-color);">POCO X7 Pro</h1>
+                        <p class="lead">Monster performa baru untuk para gamer dan konten kreator.</p>
+                        
+                        <ul class="specs-list">
+                            <li><strong>Chipset:</strong> MediaTek Dimensity 8400-Ultra (4nm)</li>
+                            <li><strong>Layar:</strong> CrystalRes 1.5K AMOLED 6.67" (120 Hz)</li>
+                            <li><strong>RAM:</strong> hingga 12GB LPDDR5X</li>
+                            <li><strong>Storage:</strong> hingga 512GB UFS 4.0</li>
+                            <li><strong>Baterai:</strong> 6000 mAh + 90W HyperCharge</li>
+                            <li><strong>Kamera:</strong> 50 MP Sony LYT-600 (OIS)</li>
+                        </ul>
+
+                        <div style="display:flex; gap:15px; flex-wrap:wrap; margin-top:30px;">
+                            <a href="https://youtube.com/shorts/IlUFKYobQdk?si=QKvxzIhqPmHIviiS " target="_blank" rel="noopener noreferrer" class="btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Tonton Video
+                            </a>
+                            <a href="https://drive.google.com/drive/folders/1FBQWJvKfW40_zN8iwbxQpBs4UMj2PcsJ " target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                Unduh Brosur
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =======================
+             4. DETAIL: realme GT 7
+             ======================= -->
+        <section id="realme-gt7" class="page-section">
+            <div class="container">
+                <button onclick="navigateTo('katalog')" class="btn-outline" style="margin-bottom:30px; border:none; padding-left:0; color: var(--text-light);">&larr; Kembali ke Katalog</button>
+                
+                <div class="grid-2">
+                    <div class="reveal">
+                        <img src="https://z-cdn-media.chatglm.cn/files/d9743fed-b2bf-4737-b1b2-1077d73a4dfa.png?auth_key=1868239040-f4975242ec53467898d31d4db1c0b721-0-98960f0cb7aa2282afe1b5e17259219b " alt="realme GT 7" class="product-img-detail">
+                    </div>
+                    
+                    <div class="reveal" style="transition-delay: 0.2s;">
+                        <h1 style="color: var(--accent-color);">realme GT 7</h1>
+                        <p class="lead">Dingin saat dipakai, panas saat dibutuhkan. Sistem pendingin revolusioner.</p>
+                        
+                        <ul class="specs-list">
+                            <li><strong>Chipset:</strong> MediaTek Dimensity 9400e</li>
+                            <li><strong>Layar:</strong> 6.78" AMOLED (1.5K, 120 Hz)</li>
+                            <li><strong>RAM:</strong> hingga 16GB</li>
+                            <li><strong>Storage:</strong> 512GB</li>
+                            <li><strong>Baterai:</strong> 7000 mAh + 120W SuperVOOC</li>
+                            <li><strong>Fitur Unggulan:</strong> Desain ICE Cooling</li>
+                        </ul>
+
+                        <div style="display:flex; gap:15px; flex-wrap:wrap; margin-top:30px;">
+                            <a href="https://youtube.com/shorts/IlUFKYobQdk?si=QKvxzIhqPmHIviiS " target="_blank" rel="noopener noreferrer" class="btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Tonton Video
+                            </a>
+                            <a href="https://drive.google.com/drive/folders/1FBQWJvKfW40_zN8iwbxQpBs4UMj2PcsJ " target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                Unduh Brosur
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =======================
+             5. DETAIL: OPPO Find X8
+             ======================= -->
+        <section id="oppo-find-x8" class="page-section">
+            <div class="container">
+                <button onclick="navigateTo('katalog')" class="btn-outline" style="margin-bottom:30px; border:none; padding-left:0; color: var(--text-light);">&larr; Kembali ke Katalog</button>
+                
+                <div class="grid-2">
+                    <div class="reveal">
+                        <img src="https://z-cdn-media.chatglm.cn/files/230bebad-9656-446c-a1d3-a5ed1c1df795.png?auth_key=1868239040-74e5fa7759cc46c78c067daf39746bb8-0-51f18b6b2aa2a0ca759dedcb3ba141de " alt="OPPO Find X8" class="product-img-detail">
+                    </div>
+                    
+                    <div class="reveal" style="transition-delay: 0.2s;">
+                        <h1 style="color: var(--accent-color);">OPPO Find X8</h1>
+                        <p class="lead">Fotografi profesional digenggaman. Zoom seolah-olah ada di sana.</p>
+                        
+                        <ul class="specs-list">
+                            <li><strong>Chipset:</strong> MediaTek Dimensity 9400</li>
+                            <li><strong>Layar:</strong> 6.59" FHD+ (120 Hz)</li>
+                            <li><strong>RAM:</strong> hingga 16GB</li>
+                            <li><strong>Storage:</strong> 512GB</li>
+                            <li><strong>Kamera:</strong> AI Telescope Zoom, AI Remaster</li>
+                            <li><strong>OS:</strong> ColorOS 15 (Android 15)</li>
+                        </ul>
+
+                        <div style="display:flex; gap:15px; flex-wrap:wrap; margin-top:30px;">
+                            <a href="https://youtube.com/shorts/IlUFKYobQdk?si=QKvxzIhqPmHIviiS " target="_blank" rel="noopener noreferrer" class="btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Tonton Video
+                            </a>
+                            <a href="https://drive.google.com/drive/folders/1FBQWJvKfW40_zN8iwbxQpBs4UMj2PcsJ " target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                Unduh Brosur
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =======================
+             6. DETAIL: vivo X300
+             ======================= -->
+        <section id="vivo-x300" class="page-section">
+            <div class="container">
+                <button onclick="navigateTo('katalog')" class="btn-outline" style="margin-bottom:30px; border:none; padding-left:0; color: var(--text-light);">&larr; Kembali ke Katalog</button>
+                
+                <div class="grid-2">
+                    <div class="reveal">
+                        <img src="https://z-cdn-media.chatglm.cn/files/53f1d2e3-accc-4303-b2fc-ed1ce41d6e76.png?auth_key=1868239040-f950462e30ad414d8232546f38c4a92d-0-f9786ee7b2d1f6b9c10b89a55a4459b9 " alt="vivo X300" class="product-img-detail">
+                    </div>
+                    
+                    <div class="reveal" style="transition-delay: 0.2s;">
+                        <h1 style="color: var(--accent-color);">vivo X300</h1>
+                        <p class="lead">Mengabadikan setiap detak waktu dengan presisi sinematik.</p>
+                        
+                        <ul class="specs-list">
+                            <li><strong>Chipset:</strong> MediaTek Dimensity 9500</li>
+                            <li><strong>Layar:</strong> LTPO AMOLED 6.78" (120 Hz)</li>
+                            <li><strong>RAM:</strong> hingga 16GB</li>
+                            <li><strong>Storage:</strong> 512GB</li>
+                            <li><strong>Kamera:</strong> Sensor 200 MP, 4K@120fps</li>
+                            <li><strong>Baterai:</strong> 5800 mAh + 100W FlashCharge</li>
+                        </ul>
+
+                        <div style="display:flex; gap:15px; flex-wrap:wrap; margin-top:30px;">
+                            <a href="https://youtube.com/shorts/IlUFKYobQdk?si=QKvxzIhqPmHIviiS " target="_blank" rel="noopener noreferrer" class="btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Tonton Video
+                            </a>
+                            <a href="https://drive.google.com/drive/folders/1FBQWJvKfW40_zN8iwbxQpBs4UMj2PcsJ " target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                Unduh Brosur
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div style="margin-bottom: 20px;">
+                <a href="#home" onclick="navigateTo('home')" style="font-size: 1.5rem; font-weight:800; color: var(--text-color); text-decoration:none;">
+                    Sea<span style="color: var(--accent-color);">Of</span>Quanta
+                </a>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <a href="#home" onclick="navigateTo('home')" style="color: var(--text-light); text-decoration: none; margin: 0 10px;">Beranda</a>
+                <a href="https://drive.google.com/drive/folders/1FBQWJvKfW40_zN8iwbxQpBs4UMj2PcsJ " target="_blank" rel="noopener noreferrer" style="color: var(--text-light); text-decoration: none; margin: 0 10px;">Google Drive</a>
+            </div>
+            <p style="font-size: 0.9rem;">&copy; 2025 Sea of Quanta Collection. All rights reserved.</p>
+            
+            <!-- Form Kontak -->
+            <div class="contact-form">
+                <h3 style="margin-bottom: 20px;">Hubungi Kami</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text" class="form-control" required name="name" placeholder="Contoh: Budi Santoso">
+                    </div>
+                    <div class="form-group">
+                        <label>Alamat Email</label>
+                        <input type="email" class="form-control" required name="email" placeholder="nama@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Pesan</label>
+                        <textarea class="form-control" rows="3" required name="message" placeholder="Saya tertarik dengan..."></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">
+                        Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 1. PRELOADER
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+            
+            // Trigger initial animations
+            setTimeout(() => {
+                navigateTo('home'); // Load home logic
+            }, 500);
+        });
+
+        // 2. NAVIGATION LOGIC (SPA)
+        function navigateTo(pageId) {
+            // Sembunyikan semua section
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+                section.classList.remove('loaded'); // Reset animasi
+            });
+
+            // Tampilkan target
+            const target = document.getElementById(pageId);
+            if (target) {
+                target.classList.add('active');
+                // Sedikit delay agar transisi opacity berjalan
+                setTimeout(() => {
+                    target.classList.add('loaded');
+                    // Trigger Scroll Reveal check pada section baru
+                    checkScrollReveal();
+                }, 50);
+                window.scrollTo(0, 0);
+            }
+
+            // Update Nav State
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                // Handle partial match or exact match
+                if(link.getAttribute('href') === '#' + pageId) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Tutup mobile menu jika terbuka
+            const navContainer = document.getElementById('navLinks');
+            if (navContainer.classList.contains('active')) {
+                navContainer.classList.remove('active');
+            }
+        }
+
+        function toggleMenu() {
+            const navContainer = document.getElementById('navLinks');
+            navContainer.classList.toggle('active');
+        }
+
+        // 3. SCROLL REVEAL ANIMATION (Intersection Observer)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Animasi sekali saja
+                }
+            });
+        }, observerOptions);
+
+        function checkScrollReveal() {
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => {
+                if(!el.classList.contains('active')) {
+                    observer.observe(el);
+                }
+            });
+        }
+        
+        // Jalankan check awal
+        checkScrollReveal();
+
+        // 4. 2D ANIMATION SHOWCASE: HERO PARTICLES
+        // Membuat efek partikel "Quanta" yang terhubung dan bergerak
+        const canvas = document.getElementById('hero-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let w, h;
+
+        // Inisialisasi Ukuran Canvas
+        function resizeCanvas() {
+            w = canvas.width = document.querySelector('.hero-container').offsetWidth;
+            h = canvas.height = document.querySelector('.hero-container').offsetHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // Class Partikel
+        class Particle {
+            constructor() {
+                this.x = Math.random() * w;
+                this.y = Math.random() * h;
+                this.vx = (Math.random() - 0.5) * 1.5;
+                this.vy = (Math.random() - 0.5) * 1.5;
+                this.size = Math.random() * 2 + 1;
+                this.color = `rgba(74, 144, 226, ${Math.random() * 0.5 + 0.2})`; // Accent color with opacity
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Pantulan dinding
+                if (this.x < 0 || this.x > w) this.vx *= -1;
+                if (this.y < 0 || this.y > h) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        }
+
+        // Init Particles
+        function initParticles() {
+            particles = [];
+            const numberOfParticles = Math.min(100, (w * h) / 10000); // Responsive jumlah partikel
+            for (let i = 0; i < numberOfParticles; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        initParticles();
+
+        // Animation Loop
+        function animateParticles() {
+            ctx.clearRect(0, 0, w, h);
+            
+            // Draw connections
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+
+                // Draw lines between close particles
+                for (let j = i; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 100) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(74, 144, 226, ${0.2 - distance/500})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateParticles);
+        }
+
+        animateParticles();
+
+        // Interaksi Mouse dengan Partikel
+        let mouse = { x: null, y: null };
+        document.querySelector('.hero-container').addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+            
+            // Sedikit dorong partikel menjauh dari mouse
+            particles.forEach(p => {
+                const dx = p.x - mouse.x;
+                const dy = p.y - mouse.y;
+                const distance = Math.sqrt(dx*dx + dy*dy);
+                if (distance < 150) {
+                    const angle = Math.atan2(dy, dx);
+                    p.vx += Math.cos(angle) * 0.5;
+                    p.vy += Math.sin(angle) * 0.5;
+                }
+            });
+        });
+
+        document.querySelector('.hero-container').addEventListener('mouseleave', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+
+
+        // 5. TOAST NOTIFICATION SYSTEM
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            
+            // Icon berdasarkan tipe
+            let icon = type === 'success' ? '✓' : '✕';
+            
+            toast.innerHTML = `
+                <span style="font-weight:bold; font-size:1.2rem;">${icon}</span>
+                <span>${message}</span>
+            `;
+            
+            container.appendChild(toast);
+            
+            // Trigger animasi masuk
+            requestAnimationFrame(() => {
+                toast.classList.add('show');
+            });
+
+            // Hapus setelah 3 detik
+            setTimeout(() => {
+                toast.classList.remove('show');
+                toast.addEventListener('transitionend', () => {
+                    toast.remove();
+                });
+            }, 3000);
+        }
+
+        // 6. FORM HANDLING (Simulasi)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            // Ubah tombol jadi loading
+            btn.innerHTML = 'Mengirim...';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+
+            // Simulasi network request
+            setTimeout(() => {
+                showToast('Pesan berhasil dikirim! Kami akan segera menghubungi Anda.', 'success');
+                this.reset();
+                
+                // Kembalikan tombol
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                btn.style.opacity = '1';
+            }, 1500);
+        });
+
+        // Handle Back/Forward Browser Button
+        window.onpopstate = function(event) {
+            const hash = window.location.hash.substring(1);
+            navigateTo(hash || 'home');
+        };
+
+    </script>
+</body>
+</html>
